@@ -647,15 +647,16 @@ subtitle:
   # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
 
-# Loading Animation (加載動畫)
+# Loading Animation (加载动画)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
-  source: 1
+  # else all
+  source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url:
+  pace_css_url: /css/progress_bar.css
 
 # aside (側邊欄)
 # --------------------------------------
@@ -890,8 +891,10 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/style.css?1">
   bottom:
     # - <script src="xxxx"></script>
+    - <script src="/js/script.js?1"></script>
 
 # CDN
 # Don't modify the following settings unless you know how they work

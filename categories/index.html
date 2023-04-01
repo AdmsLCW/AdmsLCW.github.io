@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMS</title>
+<noscript>开启Javascript是必要的</noscript>
+<link rel="icon" type="image/x-icon" href="/img/avatar.webp">
+<link rel="apple-touch-icon" href="/img/avatar.webp">
+<meta name="apple-mobile-web-app-title" content="ADMS">
+<link rel="bookmark" href="/img/avatar.webp">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
+<meta name="description" content="a blog 一个分享技术与生活的博客">
+<meta name="theme-color" content="#1C1C1F">
+<link rel="stylesheet" href="/css/var.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+
+<link rel="stylesheet" href="/lib/snackbar.min.css">
+
+
+<script src="/lib/qrcode.min.js"></script>
+
+
+    
+<script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+
+
+
+
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "temp"
+    </script> 
+</div>
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body id="body">
+        
+            <div id="loading-box" onclick="preloader.endLoading();" class style="zoom: 1;">
+    <div class="loading-bg">
+        <img class="loading-img nolazyload" alt="loading image"
+            src="/img/avatar.webp">
+        </div>
+</div>
+<script>
+    const preloader = {
+        endLoading: () => {
+            document.getElementById('loading-box').classList.add("loaded")
+        },
+        initLoading: () => {
+            document.getElementById('loading-box').classList.remove("loaded")
+        },
+        removePaceDone: () => {
+            document.getElementById('body').classList = 'pace-done'
+        }
+    }
+</script>
+        
+        <div id="console" style="zoom: 1;" class="">
+    <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
+        <i class="fas fa-circle-xmark"></i>
+    </div>
+    <div class="button-group">
+        <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
+                    style="font-size: 1rem;"></i></a></div>
+        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
+                data-pjax-state=""><i class="fas fa-music"></i></a></div>
+        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
+    </div>
+    <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
+</div>
+        <div id="sidebar" style="zoom: 1;">
+    <div id="menu-mask" style="display: none;"></div>
+    <div id="sidebar-menus" class>
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow">
+                <i class="fas fa-moon" style="font-size: 1rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+        
+        <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+</div>
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline">
+                <i class="fas fa-tags"></i>
+                <span>标签</span>
+            </div>
+            <div class="card-tag-cloud">
+                
+                    <a href="/tags/RISCV/" style="font-size: 1em; color: #d3d3d3">RISCV
+                        <sup>4</sup>
+                    </a>
+                
+                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
+                        <sup>4</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1em; color: #d3d3d3">工具
+                        <sup>2</sup>
+                    </a>
+                
+                    <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1em; color: #d3d3d3">-语言
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1em; color: #d3d3d3">前端
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 1em; color: #d3d3d3">异步
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/Click/" style="font-size: 1em; color: #d3d3d3">Click
+                        <sup>1</sup>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</div>    
+        
+            <div class="page" id="body-wrap">
+                <header class="not-top-img" id="page-header">
+    <nav id="nav" class="show">
+    <div id="nav-group">
+        <div id="blog_name">
+            
+                <div class="back-home-button" tabindex="-1">
+                    <i class="back-home-button-icon fas fa-grip-vertical"></i>
+                    <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+                </div>
+            
+            <a id="site-name" href="/" title="返回博客主页">
+                <span class="heoicon">
+                    ADMS
+                </span>
+            </a>
+        </div>
+        <div id="page-name-mask">
+            <div id="page-name">
+                <a id="page-name-text" onclick="acrylic.toTop()">ADMS</a>
+            </div>
+        </div>
+        <div id="menus">
+            <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+</div>
+        </div>
+        <!-- <div id="nav-left">
+            <div id="fps-group">
+                <div id="fps">145</div><span class="fpsText">FPS</span>
+            </div>
+        </div> -->
+        <div id="nav-right">
+            
+    <div class="nav-button only-home" id="travellings_button">
+        <a class="site-page"  target="_blank" rel="noopener external nofollow" href="https://www.travellings.cn/go.html" title="开往-友链接力"  width="120">
+            <i class="fa-solid fa-train-subway" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" onclick="toRandomPost()"
+            title="随机前往一个文章">
+            <i class="fas fa-shuffle" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
+
+    <div class="nav-button" id="nav-console">
+        <a class="console_switchbutton" onclick="acrylic.showConsole()"
+        title="显示中控台" href="javascript:void(0);" rel="external nofollow">
+        <i class="fas fa-bars-progress" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+<div class="nav-button" id="nav-totop" onclick="acrylic.toTop()">
+    <a class="totopbtn">
+        <i class="fas fa-arrow-up"></i>
+        <span id="percent">0</span>
+    </a>
+</div>
+<div id="toggle-menu">
+    <a class="site-page">
+        <i class="fas fa-bars fa-fw" style="font-size: 1rem;"></i>
+    </a>
+</div>
+        </div>
+    </div>
+</nav>
+        
+</header>
+                <main class="layout hide-aside" id="content-inner">
+    <div id="page">
+        
+                <h1 class="page-title" style="display: inline;"></h1>
+<div class="category-lists">
+    <div class="tag-cloud-list is-center">
+        
+            <a href="/categories/RISCV/">
+                <span class="tags-punctuation">#</span> 
+                RISCV
+                <span class="tagsPageCount">4</span>
+            </a>
+        
+            <a href="/categories/PULPino/">
+                <span class="tags-punctuation">#</span> 
+                PULPino
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/categories/%E5%B7%A5%E5%85%B7/">
+                <span class="tags-punctuation">#</span> 
+                工具
+                <span class="tagsPageCount">2</span>
+            </a>
+        
+            <a href="/categories/RISCV/PULPino/">
+                <span class="tags-punctuation">#</span> 
+                PULPino
+                <span class="tagsPageCount">3</span>
+            </a>
+        
+            <a href="/categories/%E5%89%8D%E7%AB%AF/">
+                <span class="tags-punctuation">#</span> 
+                前端
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/categories/%E5%BC%82%E6%AD%A5/">
+                <span class="tags-punctuation">#</span> 
+                异步
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+            <a href="/categories/%E5%BC%82%E6%AD%A5/Click/">
+                <span class="tags-punctuation">#</span> 
+                Click
+                <span class="tagsPageCount">1</span>
+            </a>
+        
+    </div>
+</div>
+             
+                
+    </div>
+       
+</main>     
+
+                <footer id="footer">
+                    <div id="footer_deal">
+    
+        <a class="deal_link" target="_blank" href="https://github.com/AdmsLCW" rel="external nofollow noopener" title="Github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    
+        <a class="deal_link" href="mailto:2118974983@qq.com" rel="external nofollow" title="Mail">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    
+    <img class="footer_mini_logo" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp"
+        title="返回顶部" onclick="acrylic.toTop()">
+    
+        <a class="deal_link" target="_blank" href="https://music.163.com" rel="external nofollow noopener" title="网易云">
+            <i class="fa-solid fa-music"></i>
+        </a>
+    
+        <a class="deal_link" target="_blank" href="https://www.bilibili.com" rel="external nofollow noopener" title="bilibili">
+            <i class="fa-brands fa-bilibili"></i>
+        </a>
+    
+</div>    
+<div id="heo-footer">
+    
+        <div class="footer-group">
+            <h3 class="footer-title">导航</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" href="/archives/" title="文章归档" rel="noopener external nofollow noreferrer">文章归档</a>
+                
+                    <a class="footer-item" href="/categories/" title="文章分类" rel="noopener external nofollow noreferrer">文章分类</a>
+                
+                    <a class="footer-item" href="/tags/" title="文章标签" rel="noopener external nofollow noreferrer">文章标签</a>
+                
+                    <a class="footer-item" href="/link/" title="友链" rel="noopener external nofollow noreferrer">友链</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">服务</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://51.la/" title="51la统计" rel="noopener external nofollow noreferrer noopener">51la统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://tongji.baidu.com/" title="百度统计" rel="noopener external nofollow noreferrer noopener">百度统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://ql.tianli0.top/" title="TianliCDN" rel="noopener external nofollow noreferrer noopener">TianliCDN</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">Acrylic</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://acrylic.zhheo.com/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
+                
+                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">推荐友链</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                
+                    <a class="footer-item" target="_blank" href="https://akilar.top" title="Akilar" rel="noopener external nofollow noreferrer noopener">Akilar</a>
+                    
+            </div>
+        </div>
+    
+    
+</div>
+<div id="footer-banner">
+    <div class="footer-banner-links">
+        <div class="footer-banner-left">
+            <div id="footer-banner-tips">
+                <div class="copyright">©2023 - 2023 By 
+                    <a class="footer-banner-link" href="/" rel="external nofollow">阿德密斯</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-banner-right">
+            <a class="footer-banner-link" href="/rss/">订阅</a>
+            
+            <a class="footer-banner-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
+                <i class="fa-solid fa-closed-captioning"></i>
+            </a>
+        </div>
+    </div>
+</div>
+                </footer>
+            </div>
+           
+        <script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+<script src="/lib/pjax.min.js"></script>
+
+
+    
+<script src="/lib/lazyload.min.js"></script>
+
+    <script>
+    window.lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img',
+        threshold: 0,
+        data_src: 'lazy-src',
+        callback_error: (img) => {
+            img.setAttribute("src", "/img/acrylic.png");
+        }
+    })
+</script>
+
+
+<script src="/lib/snackbar.min.js"></script>
+
+
+<script src="/lib/view-image.min.js"></script>
+
+
+<script src="/lib/waterfall.min.js"></script>
+
+
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
+
+<script>
+  let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '.site-config',
+    'meta[name="description"]'
+  ]
+  
+  const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+  
+  window.addEventListener('DOMContentLoaded', () => {
+          lazyLoadInstance.update()
+      
+          preloader.endLoading() 
+       
+  })
+  document.addEventListener('pjax:send', () => {
+     
+      preloader.initLoading() 
+    
+  })
+  document.addEventListener('pjax:complete', () => { 
+          preloader.endLoading()
+              preloader.removePaceDone()
+       
+      
+          lazyLoadInstance.update()
+       
+  })
+
+  document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+</script>
+
+    </body>
+</html>
+<script>const posts=["2023/03/31/verilog/","2023/03/30/tcsh/","2023/03/30/项目日志/","2023/03/29/问题记录/","2023/03/29/pulpino/","2023/03/29/博客/","2023/03/28/RI5CY/","2023/03/28/ri5cy-ex-stage/","2023/03/28/ri5cy-if-stage/","2023/03/28/异步Click/","2023/03/28/cmake/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

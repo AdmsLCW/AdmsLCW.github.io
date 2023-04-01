@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ADMS</title>
+<noscript>开启Javascript是必要的</noscript>
+<link rel="icon" type="image/x-icon" href="/img/avatar.webp">
+<link rel="apple-touch-icon" href="/img/avatar.webp">
+<meta name="apple-mobile-web-app-title" content="ADMS">
+<link rel="bookmark" href="/img/avatar.webp">
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
+<meta name="description" content="a blog 一个分享技术与生活的博客">
+<meta name="theme-color" content="#1C1C1F">
+<link rel="stylesheet" href="/css/var.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/custom.css">
+
+
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}" src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/pace/1.2.4/pace.min.js"></script>
+
+
+<link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
+
+<link rel="stylesheet" href="/lib/snackbar.min.css">
+
+
+<script src="/lib/qrcode.min.js"></script>
+
+
+    
+<script src="https://cdn.staticfile.org/twikoo/1.6.10/twikoo.all.min.js"></script>
+
+
+
+
+<div class="site-config">
+    <script>
+        var GOBALPAGE = "home"
+    </script> 
+</div>
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body id="body">
+        
+            <div id="loading-box" onclick="preloader.endLoading();" class style="zoom: 1;">
+    <div class="loading-bg">
+        <img class="loading-img nolazyload" alt="loading image"
+            src="/img/avatar.webp">
+        </div>
+</div>
+<script>
+    const preloader = {
+        endLoading: () => {
+            document.getElementById('loading-box').classList.add("loaded")
+        },
+        initLoading: () => {
+            document.getElementById('loading-box').classList.remove("loaded")
+        },
+        removePaceDone: () => {
+            document.getElementById('body').classList = 'pace-done'
+        }
+    }
+</script>
+        
+        <div id="console" style="zoom: 1;" class="">
+    <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
+        <i class="fas fa-circle-xmark"></i>
+    </div>
+    <div class="button-group">
+        <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
+                    style="font-size: 1rem;"></i></a></div>
+        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
+                data-pjax-state=""><i class="fas fa-music"></i></a></div>
+        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
+    </div>
+    <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
+</div>
+        <div id="sidebar" style="zoom: 1;">
+    <div id="menu-mask" style="display: none;"></div>
+    <div id="sidebar-menus" class>
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" onclick="acrylic.switchDarkMode()" title="显示模式切换"
+                href="javascript:void(0);" rel="external nofollow">
+                <i class="fas fa-moon" style="font-size: 1rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+        
+        <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+</div>
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline">
+                <i class="fas fa-tags"></i>
+                <span>标签</span>
+            </div>
+            <div class="card-tag-cloud">
+                
+                    <a href="/tags/RISCV/" style="font-size: 1em; color: #d3d3d3">RISCV
+                        <sup>4</sup>
+                    </a>
+                
+                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
+                        <sup>4</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1em; color: #d3d3d3">工具
+                        <sup>2</sup>
+                    </a>
+                
+                    <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1em; color: #d3d3d3">-语言
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 1em; color: #d3d3d3">前端
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 1em; color: #d3d3d3">异步
+                        <sup>1</sup>
+                    </a>
+                
+                    <a href="/tags/Click/" style="font-size: 1em; color: #d3d3d3">Click
+                        <sup>1</sup>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</div>    
+        
+            <div class="page" id="body-wrap">
+                <header class="not-top-img" id="page-header">
+    <nav id="nav" class="show">
+    <div id="nav-group">
+        <div id="blog_name">
+            
+                <div class="back-home-button" tabindex="-1">
+                    <i class="back-home-button-icon fas fa-grip-vertical"></i>
+                    <div class="back-menu-list-groups">
+    
+        
+            <div class="back-menu-list-group">
+                <div class="back-menu-list-title">
+                    我的
+                </div>
+            
+                
+                <div class="back-menu-list">
+                    <a class="back-menu-item" href="/" rel="external nofollow"
+                        title="博客">
+                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
+                        <span class="back-menu-item-text">
+                            博客
+                        </span>
+                    </a>
+                </div>
+            
+        </div>
+    
+</div>
+
+                </div>
+            
+            <a id="site-name" href="/" title="返回博客主页">
+                <span class="heoicon">
+                    ADMS
+                </span>
+            </a>
+        </div>
+        <div id="page-name-mask">
+            <div id="page-name">
+                <a id="page-name-text" onclick="acrylic.toTop()">ADMS</a>
+            </div>
+        </div>
+        <div id="menus">
+            <div class="menus_items">
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 文库</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/archives/">
+                                <i class="fas fa-box-archive"></i>
+                                <span> 文章列表</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/categories/">
+                                <i class="fas fa-cube"></i>
+                                <span> 全部分类</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/tags/">
+                                <i class="fas fa-tags"></i>
+                                <span> 全部标签</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+        <div class="menus_item">
+            
+                <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                    <span> 友链</span>
+                </a>
+                <ul class="menus_item_child">
+                    
+                        <li>
+                            <a class="site-page child" href="/fcircle/">
+                                <i class="fas fa-fish-fins"></i>
+                                <span> 友链鱼塘</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="/links/">
+                                <i class="fas fa-user-group"></i>
+                                <span> 友情链接</span>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a class="site-page child" href="javascript:travelling()">
+                                <i class="fas fa-bus"></i>
+                                <span> 宝藏博主</span>
+                            </a>
+                        </li>
+                    
+                </ul>
+             
+        </div>
+    
+</div>
+        </div>
+        <!-- <div id="nav-left">
+            <div id="fps-group">
+                <div id="fps">145</div><span class="fpsText">FPS</span>
+            </div>
+        </div> -->
+        <div id="nav-right">
+            
+    <div class="nav-button only-home" id="travellings_button">
+        <a class="site-page"  target="_blank" rel="noopener external nofollow" href="https://www.travellings.cn/go.html" title="开往-友链接力"  width="120">
+            <i class="fa-solid fa-train-subway" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" onclick="toRandomPost()"
+            title="随机前往一个文章">
+            <i class="fas fa-shuffle" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+
+
+    <div class="nav-button" id="nav-console">
+        <a class="console_switchbutton" onclick="acrylic.showConsole()"
+        title="显示中控台" href="javascript:void(0);" rel="external nofollow">
+        <i class="fas fa-bars-progress" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+<div class="nav-button" id="nav-totop" onclick="acrylic.toTop()">
+    <a class="totopbtn">
+        <i class="fas fa-arrow-up"></i>
+        <span id="percent">0</span>
+    </a>
+</div>
+<div id="toggle-menu">
+    <a class="site-page">
+        <i class="fas fa-bars fa-fw" style="font-size: 1rem;"></i>
+    </a>
+</div>
+        </div>
+    </div>
+</nav>
+        
+</header>
+                <div id="home_top">
+    
+        <div class="bbTimeList container" id="bbTimeList">
+    <i class="bber-logo fa-regular fa-bell icon-bblogo" onclick="pjax.loadUrl('/says/')"></i>
+    <div class="swiper-container swiper-no-swiping swiper-container-initialized swiper-container-vertical swiper-container-pointer-events"
+        id="bbtalk" tabindex="-1" onclick="pjax.loadUrl('/says/')">
+        <div class="swiper-wrapper" id="bber-talk">
+            
+                
+                <div class="li-style swiper-slide">
+                    开始我的博客之旅要好好坚持啊
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    博客的实时反馈和实时记录才是最重要的功能
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    不要为了短期利益毁掉了长期目标
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    人生无所谓什么“必须”，更没有统一的标准
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    要有敢于改变的勇气和坦然接受的智慧
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    深度学习 不堆砌时间
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    静下心来 不要被外界干扰
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    不要慌 慌就已经输了
+                </div>
+            
+                
+                <div class="li-style swiper-slide">
+                    适应环境 保持内心
+                </div>
+            
+        </div>
+    </div>
+    <i class="bber-gotobb fas fa-arrow-circle-right" title="查看全文" onclick="pjax.loadUrl('/says/')"></i>
+</div>
+    
+    <div class="recent-top-post-group" id="recent-top-post-group">
+    <div class="recent-post-top" id="recent-post-top">
+        <div id="bannerGroup">
+            <div id="banners">
+                <div class="banners-title">
+    <div class="banners-title-big">
+        分享设计<br>与技术生活
+    </div>
+    <div class="banners-title-small">
+        阿德密斯
+    </div>
+</div>
+<div class="tags-group-all">
+    <div class="tags-group-wrapper">
+        
+            
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #989bf8">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ae.png" title="AE" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Sketch.png" title="Sketch" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #57b6e6">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/docker.png" title="Docker" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #4082c3">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ps.png" title="ps" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/FinalCutPro.png" title="FinalCutPro" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Python.png" title="Python" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #eb6840">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Swift.png" title="Swift" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #8f55ba">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Principle.png" title="Principle" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #f29e39">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/illustrator.png" title="illustrator" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #2c51db">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/CSS3.png" title="CSS3" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #f7cb4f">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/JS.png" title="JS" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #df5b40">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/git.png" title="Git" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+               
+        
+            
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #989bf8">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ae.png" title="AE" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Sketch.png" title="Sketch" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #57b6e6">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/docker.png" title="Docker" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #4082c3">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/ps.png" title="ps" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/FinalCutPro.png" title="FinalCutPro" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #ffffff">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Python.png" title="Python" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #eb6840">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Swift.png" title="Swift" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #8f55ba">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/Principle.png" title="Principle" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #f29e39">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/illustrator.png" title="illustrator" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #2c51db">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/CSS3.png" title="CSS3" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+            
+                
+                    <div class="tags-group-icon-pair">
+                    
+                    <div class="tags-group-icon" style="background: #f7cb4f">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/JS.png" title="JS" loading="lazy">
+                    </div>
+                
+                
+            
+                    
+                    <div class="tags-group-icon" style="background: #df5b40">
+                        <img src= "/img/acrylic.png" data-lazy-src="/img/icon/git.png" title="Git" loading="lazy">
+                    </div>
+                
+                    </div>
+                
+                
+               
+            
+    </div>
+</div>
+<a id="banner-hover" onclick="toRandomPost()" data-pjax-state="">
+    <span class="bannerText">随便逛逛</span>
+    <i class="fas fa-arrow-right banner-righticon"></i>
+</a>
+            </div>
+            <div class="categoryGroup">
+                <div class="categoryItem" style="box-shadow: var(--heo-shadow-blue);"><a class="categoryButton CB1 bikan"
+        href="/tags/PULPino/">
+        <span class="categoryButtonText">现在的项目</span>
+        <i class="fas fa-dove"></i>
+    </a>
+</div>
+<div class="categoryItem" style="box-shadow: var(--heo-shadow-red);">
+    <a class="categoryButton remen" href="/tags/RISCV/">
+        <span class="categoryButtonText">热门文章</span>
+        <i class="fas fa-burn"></i>
+    </a>
+</div>
+<div class="categoryItem" style="box-shadow: var(--heo-shadow-green);">
+    <a class="categoryButton shiyong"
+        href="/tags/%E5%B7%A5%E5%85%B7/">
+        <span class="categoryButtonText">实用教程</span>
+        <i class="fas fa-book"></i>
+    </a>
+</div>
+            </div>
+        </div>
+        <div class="topGroup">
+            <style type="text/css">
+    .topGroup .todayCard::after {
+        box-shadow: 0 -109px 133px -9px #006a73 inset;
+    }
+
+    .todayCard-title,
+    .todayCard-tips,
+    .topGroup .banner-button {
+        color: #ffffff;
+    }
+
+    .topGroup .todayCard {
+        background: #006a73;
+    }
+</style>
+
+<div class="todayCard" id="todayCard" onclick="pjax.loadUrl('/')"
+    style="z-index: 1;">
+    <div class="todayCard-info">
+        <div class="todayCard-tips">阿德密斯</div>
+        <div class="todayCard-title">用技术改变生活</div>
+    </div>
+    <div class="todayCard-cover nolazyload"
+        style="background: url('/img/排球.jpg') no-repeat center /cover">
+    </div>
+    <div class="banner-button-group"><a class="banner-button"
+            onclick="window.event.cancelBubble=true;acrylic.hideTodayCard();">
+            <i class="fas fa-circle-plus"></i>
+            <span class="banner-button-text">更多推荐</span>
+        </a>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</div>
+<main class="layout" id="content-inner">
+    <div class="recent-posts" id="recent-posts">
+    <div id="category-bar">
+        <div class="category-bar-items" id="category-bar-items">
+    <div class="category-bar-item select" id="category-bar-home">
+        <a href="/">首页</a>
+    </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/RISCV/">RISCV</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/PULPino/">PULPino</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/RISCV/PULPino/">PULPino</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/%E5%BC%82%E6%AD%A5/">异步</a>
+        </div>
+    
+        <div class="category-bar-item ">
+            <a href="/categories/%E5%BC%82%E6%AD%A5/Click/">Click</a>
+        </div>
+    
+</div>
+<a class="category-bar-more" href="/categories/">更多</a>
+
+    </div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/31/verilog/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/31/verilog/" title="verilog">
+            <img class="post_bg" alt="verilog" src= "/img/acrylic.png" data-lazy-src="/img/hello.jpg">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+            </div>
+            <a class="article-title" href="/2023/03/31/verilog/" title="verilog">
+                verilog
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/%E8%AF%AD%E8%A8%80/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        -语言
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-31T15:06:54+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/30/tcsh/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/30/tcsh/" title="tcsh">
+            <img class="post_bg" alt="tcsh" src= "/img/acrylic.png" data-lazy-src="/img/hello.jpg">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">工具</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/30/tcsh/" title="tcsh">
+                tcsh
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        工具
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-30T20:01:08+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/30/项目日志/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/" title="项目日志">
+            <img class="post_bg" alt="项目日志" src= "/img/acrylic.png" data-lazy-src="img/pulpino.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">RISCV</span>
+                
+                    <span class="original">PULPino</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/" title="项目日志">
+                项目日志
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/RISCV/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        RISCV
+                    </a>
+                
+                    <a class="article-meta__tags" href="/tags/PULPino/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        PULPino
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-30T14:59:46+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/29/问题记录/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/29/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录">
+            <img class="post_bg" alt="问题记录" src= "/img/acrylic.png" data-lazy-src="/img/hello.jpg">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+            </div>
+            <a class="article-title" href="/2023/03/29/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录">
+                问题记录
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-29T19:36:45+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/29/pulpino/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/29/pulpino/" title="pulpino">
+            <img class="post_bg" alt="pulpino" src= "/img/acrylic.png" data-lazy-src="img/pulpino.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">PULPino</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/29/pulpino/" title="pulpino">
+                pulpino
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/PULPino/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        PULPino
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-29T15:04:25+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/29/博客/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/29/%E5%8D%9A%E5%AE%A2/" title="博客">
+            <img class="post_bg" alt="博客" src= "/img/acrylic.png" data-lazy-src="img/blog.jpg">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">前端</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/29/%E5%8D%9A%E5%AE%A2/" title="博客">
+                博客
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        前端
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-29T00:00:00+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/28/RI5CY/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/28/RI5CY/" title="RI5CY">
+            <img class="post_bg" alt="RI5CY" src= "/img/acrylic.png" data-lazy-src="img/RISCV.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">RISCV</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/28/RI5CY/" title="RI5CY">
+                RI5CY
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/RISCV/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        RISCV
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-28T20:06:50+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/28/ri5cy-ex-stage/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/28/ri5cy-ex-stage/" title="ri5cy_ex_stage">
+            <img class="post_bg" alt="ri5cy_ex_stage" src= "/img/acrylic.png" data-lazy-src="img/RISCV.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">RISCV</span>
+                
+                    <span class="original">PULPino</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/28/ri5cy-ex-stage/" title="ri5cy_ex_stage">
+                ri5cy_ex_stage
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/RISCV/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        RISCV
+                    </a>
+                
+                    <a class="article-meta__tags" href="/tags/PULPino/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        PULPino
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-28T19:40:54+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/28/ri5cy-if-stage/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/28/ri5cy-if-stage/" title="ri5cy_if_stage">
+            <img class="post_bg" alt="ri5cy_if_stage" src= "/img/acrylic.png" data-lazy-src="img/RISCV.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">RISCV</span>
+                
+                    <span class="original">PULPino</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/28/ri5cy-if-stage/" title="ri5cy_if_stage">
+                ri5cy_if_stage
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/RISCV/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        RISCV
+                    </a>
+                
+                    <a class="article-meta__tags" href="/tags/PULPino/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        PULPino
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-28T15:50:59+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+        <div class="recent-post-item" onclick="pjax.loadUrl('/2023/03/28/异步Click/')">
+    <div class="post_cover left_radius">
+        <a href="/2023/03/28/%E5%BC%82%E6%AD%A5Click/" title="异步Click">
+            <img class="post_bg" alt="异步Click" src= "/img/acrylic.png" data-lazy-src="img/Click.png">
+        </a>
+    </div>
+    <div class="recent-post-info">
+        <div class="recent-post-info-top">
+            <div class="recent-post-info-top-tips">
+                
+                    <span class="original">异步</span>
+                
+                    <span class="original">Click</span>
+                
+            </div>
+            <a class="article-title" href="/2023/03/28/%E5%BC%82%E6%AD%A5Click/" title="异步Click">
+                异步Click
+            </a>
+        </div>
+        <div class="article-meta-wrap">
+            <span class="article-meta tags">
+                
+                    <a class="article-meta__tags" href="/tags/%E5%BC%82%E6%AD%A5/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        异步
+                    </a>
+                
+                    <a class="article-meta__tags" href="/tags/Click/" onclick="window.event.cancelBubble=true;">
+                        <span class="tags-punctuation">#</span>
+                        Click
+                    </a>
+                
+            </span>
+            <span class="post-meta-date">
+                <time datetime="2023-03-28T15:16:56+08:00"></time>
+            </span>
+        </div>
+    </div>
+</div>
+    
+    <nav id="pagination">
+    <div class="pagination">
+        
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next</a>
+    </div>
+</nav>
+</div>
+    <div class="aside-content" id="aside-content">
+    <div class="card-widget card-info">
+    <div class="card-content">
+        <div class="card-info-avatar is-center">
+            <div class="author-info__sayhi" id="author-info__sayhi">
+            </div>
+            <div class="author-info__name">
+                阿德密斯
+            </div>
+            <div class="author-info__description">这有关于<b>RSIC-V</b>、<b>芯片设计</b>、<b>系统开发管理</b>的技术探究，还有对于生活的一些<b>想法</b>。<br>这里是我的仓库。</div>
+        </div>
+    </div>
+    <div class="banner-button-group">
+        <a class="banner-button" href="/about/">
+            <i class="fas fa-circle-chevron-right"></i>
+            <span class="banner-button-text">个人主页</span>
+        </a>
+    </div>
+    <div class="card-info-social-icons is-center">
+        
+            <a class="social-icon" target="_blank" rel="noopener" href="https://github.com/AdmsLCW" title="Github">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        
+            <a class="social-icon" href="mailto:2118974983@qq.com" title="Mail">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+        
+    </div>
+</div>
+    <!-- <div class="card-widget heo-right-widget" id="card-wechat" onclick="window.open('/wechat/')">
+        <div id="flip-wrapper">
+            <div id="flip-content">
+                <div class="face"></div>
+                <div class="back face"></div>
+            </div>
+        </div>
+    </div> -->
+    <div class="sticky_layout">
+        
+    
+       <div class="card-widget card-recent-post">
+    <div class="item-headline">
+        <i class="fas fa-list-ol"></i>
+        <span>最近发布</span>
+    </div>
+    <div class="aside-list">
+        
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/31/verilog/" title="verilog">
+                    <img
+                        alt="verilog"
+                        src="/img/hello.jpg">
+                </a>
+                <div class="content">
+                    
+                    <a class="title" href="/2023/03/31/verilog/" title="verilog">
+                        verilog
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/30/tcsh/" title="tcsh">
+                    <img
+                        alt="tcsh"
+                        src="/img/hello.jpg">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/2023/03/30/tcsh/">
+                            工具
+                        </a>
+                    
+                    <a class="title" href="/2023/03/30/tcsh/" title="tcsh">
+                        tcsh
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/" title="项目日志">
+                    <img
+                        alt="项目日志"
+                        src="img/pulpino.png">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/">
+                            RISCV
+                        </a>
+                    
+                        <a class="article-recent_post_categories" href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/">
+                            PULPino
+                        </a>
+                    
+                    <a class="title" href="/2023/03/30/%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97/" title="项目日志">
+                        项目日志
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/29/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录">
+                    <img
+                        alt="问题记录"
+                        src="/img/hello.jpg">
+                </a>
+                <div class="content">
+                    
+                    <a class="title" href="/2023/03/29/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录">
+                        问题记录
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/29/pulpino/" title="pulpino">
+                    <img
+                        alt="pulpino"
+                        src="img/pulpino.png">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/2023/03/29/pulpino/">
+                            PULPino
+                        </a>
+                    
+                    <a class="title" href="/2023/03/29/pulpino/" title="pulpino">
+                        pulpino
+                    </a>
+                </div>
+            </div>
+            
+    </div>
+</div> 
+        
+    <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+    <div class="card-tag-cloud">
+        
+            <a href="/tags/RISCV/" style="font-size: 0.8rem; color: #d3d3d3">RISCV<sup>4</sup></a>
+        
+            <a href="/tags/PULPino/" style="font-size: 0.8rem; color: #d3d3d3">PULPino<sup>4</sup></a>
+        
+            <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 0.8rem; color: #d3d3d3">工具<sup>2</sup></a>
+        
+            <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 0.8rem; color: #d3d3d3">-语言<sup>1</sup></a>
+        
+            <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 0.8rem; color: #d3d3d3">前端<sup>1</sup></a>
+        
+            <a href="/tags/%E5%BC%82%E6%AD%A5/" style="font-size: 0.8rem; color: #d3d3d3">异步<sup>1</sup></a>
+        
+            <a href="/tags/Click/" style="font-size: 0.8rem; color: #d3d3d3">Click<sup>1</sup></a>
+        
+        <ul class="card-archive-list">
+    
+        <li class="card-archive-list-item"><a class="card-archive-list-link" onclick="pjax.loadUrl('/archives/2023/')" data-pjax-state=""><span
+            class="card-archive-list-date">2023</span>
+            <div class="card-archive-list-count-group"><span class="card-archive-list-count">11</span><span
+                    class="card-archive-list-count-unit">篇</span></div>
+            </a>
+        </li>
+        
+</ul>
+
+        <hr>
+        <div class="webinfo">
+            <div class="webinfo-item">
+                <div class="webinfo-item-title">
+                    <i class="item-icon fas fa-file-alt"></i>
+                    <div class="item-name">文章总数 :</div>
+                </div>
+                <div class="item-count">11</div>
+            </div>
+            <div class="webinfo-item">
+                <div class="webinfo-item-title">
+                    <i class="item-icon fas fa-stopwatch"></i>
+                    <div class="item-name">建站天数 :</div>
+                </div>
+                <div class="item-count">5 天
+                </div>
+            </div>
+            
+                <div class="webinfo-item">
+                    <div class="webinfo-item-title">
+                        <i class="item-icon fas fa-font"></i>
+                        <div class="item-name">全站字数 :</div>
+                    </div>
+                    <div class="item-count">959</div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div> 
+</main>     
+                <footer id="footer">
+                    <div id="footer_deal">
+    
+        <a class="deal_link" target="_blank" href="https://github.com/AdmsLCW" rel="external nofollow noopener" title="Github">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    
+        <a class="deal_link" href="mailto:2118974983@qq.com" rel="external nofollow" title="Mail">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    
+    <img class="footer_mini_logo" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp"
+        title="返回顶部" onclick="acrylic.toTop()">
+    
+        <a class="deal_link" target="_blank" href="https://music.163.com" rel="external nofollow noopener" title="网易云">
+            <i class="fa-solid fa-music"></i>
+        </a>
+    
+        <a class="deal_link" target="_blank" href="https://www.bilibili.com" rel="external nofollow noopener" title="bilibili">
+            <i class="fa-brands fa-bilibili"></i>
+        </a>
+    
+</div>    
+<div id="heo-footer">
+    
+        <div class="footer-group">
+            <h3 class="footer-title">导航</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" href="/archives/" title="文章归档" rel="noopener external nofollow noreferrer">文章归档</a>
+                
+                    <a class="footer-item" href="/categories/" title="文章分类" rel="noopener external nofollow noreferrer">文章分类</a>
+                
+                    <a class="footer-item" href="/tags/" title="文章标签" rel="noopener external nofollow noreferrer">文章标签</a>
+                
+                    <a class="footer-item" href="/link/" title="友链" rel="noopener external nofollow noreferrer">友链</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">服务</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://51.la/" title="51la统计" rel="noopener external nofollow noreferrer noopener">51la统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://tongji.baidu.com/" title="百度统计" rel="noopener external nofollow noreferrer noopener">百度统计</a>
+                
+                    <a class="footer-item" target="_blank" href="https://ql.tianli0.top/" title="TianliCDN" rel="noopener external nofollow noreferrer noopener">TianliCDN</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">Acrylic</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://acrylic.zhheo.com/" title="主题官网" rel="noopener external nofollow noreferrer noopener">主题官网</a>
+                
+                    <a class="footer-item" target="_blank" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic" title="Github" rel="noopener external nofollow noreferrer noopener">Github</a>
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                    
+            </div>
+        </div>
+    
+        <div class="footer-group">
+            <h3 class="footer-title">推荐友链</h3>
+            <div class="footer-links">
+                
+                    <a class="footer-item" target="_blank" href="https://blog.zhheo.com/" title="Heo" rel="noopener external nofollow noreferrer noopener">Heo</a>
+                
+                    <a class="footer-item" target="_blank" href="https://akilar.top" title="Akilar" rel="noopener external nofollow noreferrer noopener">Akilar</a>
+                    
+            </div>
+        </div>
+    
+    
+</div>
+<div id="footer-banner">
+    <div class="footer-banner-links">
+        <div class="footer-banner-left">
+            <div id="footer-banner-tips">
+                <div class="copyright">©2023 - 2023 By 
+                    <a class="footer-banner-link" href="/" rel="external nofollow">阿德密斯</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-banner-right">
+            <a class="footer-banner-link" href="/rss/">订阅</a>
+            
+            <a class="footer-banner-link cc" target="_blank" href="https://creativecommons.org/licenses/by/4.0/" title="cc协议">
+                <i class="fa-solid fa-closed-captioning"></i>
+            </a>
+        </div>
+    </div>
+</div>
+                </footer>
+            </div>
+           
+        <script type="text/javascript" src="/js/utils.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+<script src="/lib/pjax.min.js"></script>
+
+
+    
+<script src="/lib/lazyload.min.js"></script>
+
+    <script>
+    window.lazyLoadInstance = new LazyLoad({
+        elements_selector: 'img',
+        threshold: 0,
+        data_src: 'lazy-src',
+        callback_error: (img) => {
+            img.setAttribute("src", "/img/acrylic.png");
+        }
+    })
+</script>
+
+
+<script src="/lib/snackbar.min.js"></script>
+
+
+<script src="/lib/view-image.min.js"></script>
+
+
+<script src="/lib/waterfall.min.js"></script>
+
+
+    
+<link rel="stylesheet" href="/lib/swiper.min.css">
+
+    
+<script src="/lib/swiper.min.js"></script>
+
+
+
+<script>
+  let pjaxSelectors = [
+    'title',
+    '#body-wrap',
+    '.site-config',
+    'meta[name="description"]'
+  ]
+  
+  const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+  
+  window.addEventListener('DOMContentLoaded', () => {
+          lazyLoadInstance.update()
+      
+          preloader.endLoading() 
+       
+  })
+  document.addEventListener('pjax:send', () => {
+     
+      preloader.initLoading() 
+    
+  })
+  document.addEventListener('pjax:complete', () => { 
+          preloader.endLoading()
+              preloader.removePaceDone()
+       
+      
+          lazyLoadInstance.update()
+       
+  })
+
+  document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+</script>
+
+    </body>
+</html>
+<script>const posts=["2023/03/31/verilog/","2023/03/30/tcsh/","2023/03/30/项目日志/","2023/03/29/问题记录/","2023/03/29/pulpino/","2023/03/29/博客/","2023/03/28/RI5CY/","2023/03/28/ri5cy-ex-stage/","2023/03/28/ri5cy-if-stage/","2023/03/28/异步Click/","2023/03/28/cmake/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

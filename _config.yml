@@ -99,6 +99,14 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: Acrylic
 
+
+server:
+  port: 4000 #端口号随意，默认是4000
+  compress: true
+  header: true
+
+
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:

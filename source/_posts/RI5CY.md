@@ -1,11 +1,12 @@
 ---
 title: RI5CY
-date: 2023-03-28 20:06:50
 tags:
-  - RSIC-V
+  - RISCV
 categories:
-  - RISC-V
-cover: img/RISCY.png
+  - RISCV
+cover: img/RISCV.png
+abbrlink: 37966
+date: 2023-03-28 20:06:50
 ---
 
 # RI5CY
@@ -14,7 +15,7 @@ cover: img/RISCY.png
 
 寻址方式：4种。立即数寻址、寄存器寻址、Load指令的基地址寻址、分支跳转的PC相对寻址。
 
-![image-20230328200918392](I:\Github\Blogroot\blog\source\img\RISC-V\image-20230328200918392.png)
+![image-20230328200918392](https://326-adms-1305022140.cos.ap-nanjing.myqcloud.com/images/image-20230328200918392.png)
 
 四级流水：取值、译码、执行、回写。
 
@@ -23,3 +24,4 @@ cover: img/RISCY.png
 数据冒险：解决方法（1）Forward电路，数据前推；（2）Bypass电路；（3）流水线停顿。
 
 指令预取buffer：队列buffer、FIFO；cache方式，位于多核共享指令缓存和处理器和之间。
+

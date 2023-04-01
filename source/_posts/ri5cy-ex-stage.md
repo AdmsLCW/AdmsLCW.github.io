@@ -1,12 +1,12 @@
 ---
 title: ri5cy_ex_stage
 tags:
-  - RSIC-V
+  - RISCV
   - PULPino
 categories:
-  - RISC-V
+  - RISCV
   - PULPino
-cover: img/RISCY.png
+cover: img/RISCV.png
 abbrlink: 42155
 date: 2023-03-28 19:40:54
 ---

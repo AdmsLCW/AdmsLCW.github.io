@@ -123,6 +123,48 @@
   --style-border-forever: 2px solid var(--heo-lighttext);
 }
 
+[data-theme="dark"] #footer::before, [data-theme="dark"] #page-header::before, [data-theme="dark"] #web_bg::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+}
+
+[data-theme="dark"] #article-container pre>code {
+  background: rgb(23, 23, 23);
+}
+
+[data-theme="dark"] #article-container figure.highlight {
+  box-shadow: none;
+}
+
+[data-theme="dark"] #article-container .note code {
+  background: rgba(27, 31, 35, 0.05);
+}
+
+[data-theme="dark"] #article-container .aplayer {
+  filter: brightness(0.8);
+}
+
+[data-theme="dark"] #article-container kbd {
+  border-color: rgb(105, 105, 105);
+  background-color: rgb(82, 82, 82);
+  color: rgb(226, 241, 255);
+}
+
+[data-theme="dark"] .note {
+  filter: brightness(0.9);
+}
+
+[data-theme="dark"] img {
+  filter: brightness(0.8);
+}
+
+[data-theme="dark"] #aside-content .aside-list>.aside-list-item:not(:last-child) {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
 @media screen and (max-width: 768px) {
   :root {
     --style-border: 0px solid var(--heo-card-border);

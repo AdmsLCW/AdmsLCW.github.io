@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="zh-CN" data-theme="light">
     <head>
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,12 +36,8 @@
 
 
 
-<div class="site-config">
-    <script>
-        var GOBALPAGE = "temp"
-    </script> 
-</div>
 
+<script>var GLOBALCONFIG = {"root":"/","runtime":"2023-3-28 00:00:00","lazyload":{"enable":false,"error":"/img/acrylic.png"},"hightlight":{"enable":true,"limit":200},"lightbox":true,"randomlinks":false,"lang":{"theme":{"dark":"已切换至深色模式","light":"已切换至浅色模式"},"copy":{"success":"复制成功","error":"复制失败"},"backtop":"返回顶部","time":{"recent":"最近","yesterday":"昨天","berforeyesterday":"前天","daybefore":"天前","runtime":"天"},"sayhello":{"morning":"早上好","noon":"中午好","afternoon":"下午好","night":"晚上好","goodnight":"晚安","iam":"!  我是"},"search":{"empty":"搜索结果为空","hit":"已为您找到 ${query} 条结果","placeholder":"输入关键词快速查找"}},"covercolor":true};</script><script id="site-config">var PAGECONFIG = {"is_home":false,"is_post":false,"is_page":false,"page":false,"comment":false};</script>
     <meta name="generator" content="Hexo 6.3.0"></head>
     <body id="body">
         
@@ -63,7 +59,73 @@
             document.getElementById('body').classList = 'pace-done'
         }
     }
+    window.addEventListener('load',()=> { preloader.endLoading() })
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
 </script>
+<style>
+    #loading-box {
+        -webkit-user-select: none;
+    }
+
+    #loading-box .loading-bg {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background: var(--heo-background);
+        z-index: 1999;
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events: all;
+        animation: showLoading 0.3s 0s backwards;
+    }
+
+    #loading-box.loaded .loading-bg {
+        pointer-events: none;
+        transition: 0.2s;
+        animation: hideLoading 0.3s 0s forwards;
+    }
+
+    #loading-box .loading-img {
+        width: 100px;
+        margin: auto;
+        animation-duration: 0.2s;
+        animation-name: loadingAction;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes loadingAction {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0.6;
+        }
+    }
+
+    @keyframes hideLoading {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes showLoading {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>
         
         <div id="console" style="zoom: 1;" class="">
     <div class="close-btn" onclick="acrylic.hideConsole()" href="javascript:void(0);">
@@ -73,9 +135,10 @@
         <div class="console-btn-item"> <a class="darkmode_switchbutton" onclick="acrylic.switchDarkMode()" title="显示模式切换"
                 href="javascript:void(0);" rel="external nofollow" data-pjax-state=""><i class="fas fa-moon"
                     style="font-size: 1rem;"></i></a></div>
-        <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关"><a class="music-switch"
-                data-pjax-state=""><i class="fas fa-music"></i></a></div>
-        <div class="console-btn-item" id="consoleFPS" onclick="heo.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
+                    
+            <div class="console-btn-item" id="consoleMusic" onclick="acrylic.musicToggle()" title="音乐开关"><a class="music-switch"><i class="fas fa-music"></i></a></div>
+        
+        <div class="console-btn-item" id="consoleFPS" onclick="acrylic.FPSToggle()" title="帧率显示开关"><a class="FPS-switch"
                 data-pjax-state=""><i class="fas fa-gauge"></i></a></div>
     </div>
     <div class="console-mask" onclick="acrylic.hideConsole()" href="javascript:void(0);" rel="external nofollow"></div>
@@ -94,27 +157,26 @@
         
             <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="/" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
         
         <div class="menus_items">
     
@@ -195,12 +257,12 @@
                         <sup>4</sup>
                     </a>
                 
-                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
-                        <sup>4</sup>
-                    </a>
-                
                     <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1em; color: #d3d3d3">工具
                         <sup>2</sup>
+                    </a>
+                
+                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
+                        <sup>4</sup>
                     </a>
                 
                     <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1em; color: #d3d3d3">-语言
@@ -234,38 +296,37 @@
                     <i class="back-home-button-icon fas fa-grip-vertical"></i>
                     <div class="back-menu-list-groups">
     
-        
-            <div class="back-menu-list-group">
-                <div class="back-menu-list-title">
-                    我的
-                </div>
-            
-                
-                <div class="back-menu-list">
-                    <a class="back-menu-item" href="/" rel="external nofollow"
-                        title="博客">
-                        <img class="back-menu-item-icon" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp" loading="lazy">
-                        <span class="back-menu-item-text">
-                            博客
-                        </span>
-                    </a>
-                </div>
-            
+      
+      <div class="back-menu-list-group">
+        <div class="back-menu-list-title">
+          我的
         </div>
+        <div class="back-menu-list">
+          
+            
+            <a class="back-menu-item" href="/" rel="external nofollow" title="博客">
+              <img class="back-menu-item-icon" src="/img/avatar.webp" loading="lazy">
+              <span class="back-menu-item-text">
+                博客
+              </span>
+            </a>
+          
+        </div>
+      </div>
     
-</div>
-
+  </div>
+  
                 </div>
             
             <a id="site-name" href="/" title="返回博客主页">
-                <span class="heoicon">
-                    ADMS
-                </span>
+                    
+                        <span class="heoicon">ADMS</span>
+                    
             </a>
         </div>
         <div id="page-name-mask">
             <div id="page-name">
-                <a id="page-name-text" onclick="acrylic.toTop()">ADMS</a>
+                <a id="page-name-text" onclick="acrylic.toTop()">tags</a>
             </div>
         </div>
         <div id="menus">
@@ -386,7 +447,7 @@
                 <main class="layout hide-aside" id="content-inner">
     <div id="page">
         
-            <h1 class="page-title" style="display: inline;"></h1>
+            <h1 class="page-title">标签</h1>
 <div class="category-lists">
     <div class="tag-cloud-list is-center">
         
@@ -396,16 +457,16 @@
                 <span class="tagsPageCount">4</span>
             </a>
         
-            <a href="/tags/PULPino/">
-                <span class="tags-punctuation">#</span> 
-                PULPino
-                <span class="tagsPageCount">4</span>
-            </a>
-        
             <a href="/tags/%E5%B7%A5%E5%85%B7/">
                 <span class="tags-punctuation">#</span> 
                 工具
                 <span class="tagsPageCount">2</span>
+            </a>
+        
+            <a href="/tags/PULPino/">
+                <span class="tags-punctuation">#</span> 
+                PULPino
+                <span class="tagsPageCount">4</span>
             </a>
         
             <a href="/tags/%E8%AF%AD%E8%A8%80/">
@@ -435,7 +496,7 @@
     </div>
 </div>
              
-                
+            
     </div>
        
 </main>     
@@ -451,7 +512,7 @@
             <i class="fa-solid fa-envelope"></i>
         </a>
     
-    <img class="footer_mini_logo" src= "/img/acrylic.png" data-lazy-src="/img/avatar.webp"
+    <img class="footer_mini_logo" src="/img/avatar.webp"
         title="返回顶部" onclick="acrylic.toTop()">
     
         <a class="deal_link" target="_blank" href="https://music.163.com" rel="external nofollow noopener" title="网易云">
@@ -525,6 +586,7 @@
             <div id="footer-banner-tips">
                 <div class="copyright">©2023 - 2023 By 
                     <a class="footer-banner-link" href="/" rel="external nofollow">阿德密斯</a>
+                    <a class="footer-banner-link" href="https://github.com/hexo-theme-Acrylic/Hexo-Theme-Acrylic-Next" rel="external nofollow" target="_blank"> Theme By Acrylic-Next</a>
                 </div>
             </div>
         </div>
@@ -539,36 +601,22 @@
 </div>
                 </footer>
             </div>
-           
-        <script type="text/javascript" src="/js/utils.js"></script>
-<script type="text/javascript" src="/js/main.js"></script>
-
+         
+        <div>
+    <script type="text/javascript" src="/js/utils.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+    
 
 <script src="/lib/pjax.min.js"></script>
 
-
-    
-<script src="/lib/lazyload.min.js"></script>
-
-    <script>
-    window.lazyLoadInstance = new LazyLoad({
-        elements_selector: 'img',
-        threshold: 0,
-        data_src: 'lazy-src',
-        callback_error: (img) => {
-            img.setAttribute("src", "/img/acrylic.png");
-        }
-    })
-</script>
 
 
 <script src="/lib/snackbar.min.js"></script>
 
 
+    
 <script src="/lib/view-image.min.js"></script>
 
-
-<script src="/lib/waterfall.min.js"></script>
 
 
     
@@ -578,13 +626,36 @@
 <script src="/lib/swiper.min.js"></script>
 
 
+<div id="js-pjax">
+    
+    
+        <script async src="https://npm.elemecdn.com/penndu@1.0.0/bsz.js"></script>
+     
+</div>
 
-<script>
+    
+<link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
+
+    
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
+
+    
+<script src="https://cdn1.tianli0.top/npm/meting@2.0.1/dist/Meting.min.js"></script>
+
+
+
+    
+<script src="/js/extend/covercolor/web.js"></script>
+
+        
+
+    <script>
   let pjaxSelectors = [
     'title',
     '#body-wrap',
-    '.site-config',
-    'meta[name="description"]'
+    '#site-config',
+    'meta[name="description"]',
+    '#js-pjax'
   ]
   
   const pjax = new Pjax({
@@ -594,25 +665,13 @@
     analytics: false,
     scrollRestoration: false
   })
-  
-  window.addEventListener('DOMContentLoaded', () => {
-          lazyLoadInstance.update()
-      
-          preloader.endLoading() 
-       
-  })
-  document.addEventListener('pjax:send', () => {
-     
-      preloader.initLoading() 
-    
-  })
-  document.addEventListener('pjax:complete', () => { 
-          preloader.endLoading()
-              preloader.removePaceDone()
-       
-      
-          lazyLoadInstance.update()
-       
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
   })
 
   document.addEventListener('pjax:error', (e) => {
@@ -621,7 +680,16 @@
     }
   })
 </script>
-
+    
+</div>
+        
+     
+        <div class="needEndHide" id="nav-music" onclick="acrylic.musicToggle()">
+    <div id="nav-music-hoverTips">音乐已暂停</div>
+    <meting-js id="1708664797" server="tencent" type="playlist" mutex="true"
+        preload="none" data-lrctype="0" order="random" theme="var(--heo-main)"></meting-js>
+</div>
+    
     </body>
 </html>
 <script>const posts=["2023/03/31/verilog/","2023/03/30/tcsh/","2023/03/30/项目日志/","2023/03/29/问题记录/","2023/03/29/pulpino/","2023/03/29/博客/","2023/03/28/RI5CY/","2023/03/28/ri5cy-ex-stage/","2023/03/28/ri5cy-if-stage/","2023/03/28/异步Click/","2023/03/28/cmake/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

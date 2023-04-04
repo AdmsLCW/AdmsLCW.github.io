@@ -390,14 +390,20 @@ class tabs {
     }
 }
 
+const setTheme = () => {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+};
+
 window.refreshFn = () => {
     scrollFn()
     sidebarFn()
     setTimeState()
     chageTimeFormate()
+    setTheme()
     acrylic.addRuntime()
     GLOBALCONFIG.lazyload.enable && acrylic.lazyloadImg()
-    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img')
+    GLOBALCONFIG.lightbox && acrylic.lightbox('#article-container img, #bber .bber-content-img img, #album_detail album-content-img img')
     GLOBALCONFIG.randomlinks && randomLinksList()
     PAGECONFIG.toc && toc.init()
     if (PAGECONFIG.is_post) {
@@ -410,6 +416,9 @@ window.refreshFn = () => {
         acrylic.initbbtalk()
     }
     if (PAGECONFIG.is_page && PAGECONFIG.page === 'says') acrylic.reflashEssayWaterFall()
+    if (PAGECONFIG.is_page) {
+        if (document.getElementById('album_detail')) acrylic.reflashEssayWaterFall()
+    }
     GLOBALCONFIG.covercolor && coverColor()
 }
 

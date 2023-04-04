@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="ADMS">
 <link rel="bookmark" href="/img/avatar.webp">
 <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/img/avatar.webp">
-<meta name="description" content="项目日志主要任务，熟悉pulpino整个平台的运行过程，并将异步组件加入到pulpino中。第一周​	解决modelsim和verdi联合仿真的问题，并将Click产生的fire信号正确的送入ex模块">
+<meta name="description" content="项目日志主要任务，熟悉pulpino整个平台的运行过程，并将异步组件加入到pulpino中。第一周解决modelsim和verdi联合仿真的问题，并将Click产生的fire信号正确的送入ex模块中去">
 <meta name="theme-color" content="#1C1C1F">
 <link rel="stylesheet" href="/css/var.css">
 <link rel="stylesheet" href="/css/main.css">
@@ -269,23 +269,23 @@
             </div>
             <div class="card-tag-cloud">
                 
-                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
-                        <sup>1</sup>
-                    </a>
-                
                     <a href="/tags/%E5%B7%A5%E5%85%B7/" style="font-size: 1em; color: #d3d3d3">工具
                         <sup>2</sup>
+                    </a>
+                
+                    <a href="/tags/RISCV/" style="font-size: 1em; color: #d3d3d3">RISCV
+                        <sup>1</sup>
                     </a>
                 
                     <a href="/tags/RISCV-PULPino/" style="font-size: 1em; color: #d3d3d3">RISCV PULPino
                         <sup>3</sup>
                     </a>
                 
-                    <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1em; color: #d3d3d3">语言
+                    <a href="/tags/PULPino/" style="font-size: 1em; color: #d3d3d3">PULPino
                         <sup>1</sup>
                     </a>
                 
-                    <a href="/tags/RISCV/" style="font-size: 1em; color: #d3d3d3">RISCV
+                    <a href="/tags/%E8%AF%AD%E8%A8%80/" style="font-size: 1em; color: #d3d3d3">语言
                         <sup>1</sup>
                     </a>
                 
@@ -511,7 +511,7 @@
             
                 <span class="post-meta-date" title="更新于">
                     <i class="post-meta-icon fa-solid fa-clock-rotate-left"></i>
-                    <time datetime="2023-04-04T12:47:22+08:00"></time>
+                    <time datetime="2023-04-04T15:40:26+08:00"></time>
                 </span>
             
             
@@ -524,7 +524,7 @@
                 
                     <span class="post-meta-wordcount">
                         <i class="fas fa-file-word fa-fw post-meta-icon" title="文章字数"></i>
-                        <span class="word-count">62</span>
+                        <span class="word-count">149</span>
                     </span>
                 
                 
@@ -573,8 +573,14 @@
     <div id="post">
         <article class="post-content" id="article-container">
             <h1 id="项目日志"><a href="#项目日志" class="headerlink" title="项目日志"></a>项目日志</h1><p><strong>主要任务，熟悉pulpino整个平台的运行过程，并将异步组件加入到pulpino中。</strong></p>
-<p>第一周</p>
-<p>​	解决modelsim和verdi联合仿真的问题，并将Click产生的fire信号正确的送入ex模块中去。</p>
+<h2 id="第一周"><a href="#第一周" class="headerlink" title="第一周"></a>第一周</h2><ul>
+<li>解决modelsim和verdi联合仿真的问题，并将Click产生的fire信号正确的送入ex模块中去。</li>
+</ul>
+<p>​	<em>按照道理说，click产生的时钟信号和clk相位和频率都是一样的，但是ex模块出错，modelsim因为开了优化而无法观察信号，也就无法追踪错误，该问题暂时无法解决。</em></p>
+<h2 id="第二周"><a href="#第二周" class="headerlink" title="第二周"></a>第二周</h2><p>平台暂时无法深究原理</p>
+<ul>
+<li>将在windows下使用questasim搭建整个pulpino平台</li>
+</ul>
 
         </article>
         <div class="post-tools" id="post-tools">
@@ -750,7 +756,7 @@
         <span>文章目录</span>
     </div>
     <div class="toc-content" id="toc-content">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97"><span class="toc-text">项目日志</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%97%A5%E5%BF%97"><span class="toc-text">项目日志</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E5%91%A8"><span class="toc-text">第一周</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%91%A8"><span class="toc-text">第二周</span></a></li></ol></li></ol>
     </div>
 </div>
             
@@ -763,21 +769,6 @@
     </div>
     <div class="aside-list">
         
-        
-            <div class="aside-list-item">
-                <a class="thumbnail" href="/2023/04/03/%E6%B5%8B%E8%AF%95/" title="测试">
-                    <img
-                        alt="测试"
-                        src="/img/hello.jpg">
-                </a>
-                <div class="content">
-                    
-                    <a class="title" href="/2023/04/03/%E6%B5%8B%E8%AF%95/" title="测试">
-                        测试
-                    </a>
-                </div>
-            </div>
-                
         
             <div class="aside-list-item">
                 <a class="thumbnail" href="/2023/03/31/verilog/" title="verilog">
@@ -842,6 +833,25 @@
                     
                     <a class="title" href="/2023/03/29/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/" title="问题记录">
                         问题记录
+                    </a>
+                </div>
+            </div>
+                
+        
+            <div class="aside-list-item">
+                <a class="thumbnail" href="/2023/03/29/pulpino/" title="pulpino">
+                    <img
+                        alt="pulpino"
+                        src="/img/pulpino.png">
+                </a>
+                <div class="content">
+                    
+                        <a class="article-recent_post_categories" href="/2023/03/29/pulpino/">
+                            PULPino
+                        </a>
+                    
+                    <a class="title" href="/2023/03/29/pulpino/" title="pulpino">
+                        pulpino
                     </a>
                 </div>
             </div>
@@ -1044,4 +1054,4 @@
     
     </body>
 </html>
-<script>const posts=["2023/04/03/测试/","2023/03/31/verilog/","2023/03/30/tcsh/","2023/03/30/项目日志/","2023/03/29/问题记录/","2023/03/29/pulpino/","2023/03/29/博客/","2023/03/28/RI5CY/","2023/03/28/ri5cy-ex-stage/","2023/03/28/ri5cy-if-stage/","2023/03/28/异步Click/","2023/03/28/cmake/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
+<script>const posts=["2023/03/31/verilog/","2023/03/30/tcsh/","2023/03/30/项目日志/","2023/03/29/问题记录/","2023/03/29/pulpino/","2023/03/29/博客/","2023/03/28/RI5CY/","2023/03/28/ri5cy-ex-stage/","2023/03/28/ri5cy-if-stage/","2023/03/28/异步Click/","2023/03/28/cmake/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>

@@ -4,12 +4,14 @@ tags:
   - 工具
 categories:
   - 工具
-cover: img/Cmake.png
+cover: /img/cmake.png
 abbrlink: 24935
 date: 2023-03-28 15:16:00
 ---
 
 # Cmake
+
+## 流程
 
 ```cmake
 PROJECT  (HELLO)
@@ -36,3 +38,8 @@ ADD_EXECUTABLE(hello main.c)
 
 在目录下建立一个build文件用来存储cmake产生的中间件，不过需要使用cmake …来运行。其中外部编译，PROJECT_SOURCE_DIR仍然指代工程路径，即**/backup/cmake/t1**，而PROJECT_BINARY_DIR指代编译路径，即**/backup/cmake/t1/build**。
 
+## 一些命令
+
+cmake -D宏定义
+
+[cmake常用命令的一些整理 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/315768216)

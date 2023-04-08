@@ -8,7 +8,7 @@ subtitle: ''
 description: 'a blog 一个分享技术与生活的博客'
 keywords: RSIC-V linux  异步 生活
 author: 阿德密斯
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -111,7 +111,7 @@ server:
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/AdmsLCW/AdmsLCW.github.io # 比如：https://github.com/YunYouJun/yunyoujun.github.io
+  repo: https://github.com/AdmsLCW/AdmsLCW.github.io   #git@8.130.44.128:/var/repo/hexo.git # 比如：https://github.com/YunYouJun/yunyoujun.github.io
   branch: master # 默认使用 master 分支
   message: Update Hexo Static Content # 你可以自定义此次部署更新的说明
 

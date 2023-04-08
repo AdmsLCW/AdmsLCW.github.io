@@ -4,7 +4,8 @@ tags:
   - RISCV
 categories:
   - RISCV
-cover: img/RISCV.png
+cover: /img/RISCV.png
+recommend: true
 abbrlink: 37966
 date: 2023-03-28 20:06:50
 ---

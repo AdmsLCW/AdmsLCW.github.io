@@ -1,0 +1,95 @@
+banner:
+      - name: Akilar
+        link: https://akilar.top
+        avatar: https://bu.dusays.com/2022/08/14/62f87864834ae.png
+
+      - name: 张洪Heo
+        link: https://blog.zhheo.com
+        avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+
+      - name: 安知鱼`Blog
+        link: https://anzhiy.cn
+        avatar: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+
+      - name: Leonus
+        link: https://blog.leonus.cn
+        avatar: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5
+
+      - name: 轻笑Chuckle
+        link: https://www.chuckle.top
+        avatar: https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp
+
+      - name: Ariasakaの小窝
+        link: https://yisous.xyz
+        avatar: https://bu.dusays.com/2022/10/22/6352dfd1f3fa3.png
+
+      - name: Leaf
+        link: https://Leaf-yy.github.io
+        avatar: https://cdn.jsdelivr.net/gh/Leaf-yy/Leaf-yy.github.io@latest/images/avatar.jpg
+
+
+links:  
+  - class_name: 大佬们
+    descr: 一些大佬
+    type: card
+    link_list:
+      - name: Akilar
+        link: https://akilar.top
+        avatar: https://bu.dusays.com/2022/08/14/62f87864834ae.png
+        topimg: https://bu.dusays.com/2022/08/14/62f87864834ae.png
+        descr: 欢迎光临糖果屋
+        rss: /atom.xml
+
+      - name: 张洪Heo
+        link: https://blog.zhheo.com
+        avatar: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+        topimg: https://img.zhheo.com/i/2022/08/19/62ff32fa28da1.png
+        descr: 分享设计与科技生活
+        rss: /rss.xml
+
+      - name: 安知鱼`Blog
+        link: https://anzhiy.cn
+        avatar: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+        topimg: https://image.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
+        descr: 生活明朗，万物可爱
+        tag: 技术
+        rss: /atom.xml
+
+      - name: Leonus
+        link: https://blog.leonus.cn
+        avatar: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5
+        topimg: https://q1.qlogo.cn/g?b=qq&nk=553344777&s=5
+        descr: 进一寸有进一寸的欢喜。
+        tag: 技术
+        rss: /atom.xml
+
+      - name: 轻笑Chuckle
+        link: https://www.chuckle.top
+        avatar: https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp
+        topimg: https://cdn1.tianli0.top/npm/chuckle-js-css/chuckle/head.webp
+        descr: 宁静致远,倾尘轻笑
+        tag: 技术
+        rss: /atom.xml
+
+      - name: Ariasakaの小窝
+        link: https://yisous.xyz
+        avatar: https://bu.dusays.com/2022/10/22/6352dfd1f3fa3.png
+        topimg: https://bu.dusays.com/2022/10/22/6352dfd1f3fa3.png
+        descr: 人有悲欢离合 月有阴晴圆缺
+        tag: 技术
+        rss: /atom.xml
+
+  - class_name: 朋友们
+    descr: 一些志同道合的朋友
+    type: item
+    link_list:
+      - name: Leaf
+        link: https://Leaf-yy.github.io
+        avatar: https://cdn.jsdelivr.net/gh/Leaf-yy/Leaf-yy.github.io@latest/images/avatar.jpg
+        descr: 始于兴趣 忠于学习 陷于记录
+        rss: /feed/
+
+
+        	
+
+
